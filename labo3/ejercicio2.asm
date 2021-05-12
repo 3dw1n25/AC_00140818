@@ -1,0 +1,23 @@
+	org 	100h
+
+	section	.text
+
+	XOR CX, CX
+	XOR AX, AX
+	MOV CL, 5d
+	MOV AL, 1d
+	CMP CL, 0d
+	JZ jump
+
+	;DONDE SE HARÁN LAS MULTIPLICACIONES DE 5 A 1
+con:
+	MUL CX
+	LOOP con
+
+	;SE GUARDA EN EL REGISTRO SOLICITADO
+salto:
+	MOV[20Bh],AL
+
+
+	;FIN DEL PROGRAMA
+	int 20h
