@@ -24,7 +24,7 @@
 		INC DL
 		CMP DI, 6d 
 		JB ITERAR;si DI es menor a 6 segurá iterando
-		CALL sup
+		CALL SUP
 		jmp ITERAR2
 
 	ITERAR2:
@@ -36,7 +36,7 @@
 		INC DL
 		CMP DI, 9d 
 		JB ITERAR2;si DI es menor a 9 seguirá iterando
-		CALL sup
+		CALL SUP
 		jmp ITERAR3
 
 	ITERAR3:
@@ -48,7 +48,7 @@
 		INC DL
 		CMP DI, 9d 
 		JB ITERAR3;si DI es menor a 9 seguirá iterando
-		CALL sup
+		CALL SUP
 		jmp ITERAR4
 
 	ITERAR4:
@@ -62,7 +62,7 @@
 		JB ITERAR4;si DI es menor a 9 seguirá iterando
 		jmp esperartecla 
 
-	sup:
+	SUP:
 		mov di, 0d;regresando di a valor inicial
 		mov DL, 30;regresa a la columna inicial 
 		ADD DH, 2;suma 2 a la fila del cursor
